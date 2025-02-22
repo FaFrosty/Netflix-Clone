@@ -1,0 +1,459 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  background-image: url("Background\ image.jpg");
+  height: 100vh;
+  position: relative;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: max(1500px, 100vw);
+  box-shadow: 1px 5px 66px 20px black inset;
+}
+
+.logo {
+  width: 146px;
+  position: relative;
+  z-index: 10;
+}
+
+nav button {
+  position: relative;
+  z-index: 10;
+}
+
+.main .box {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  filter: opacity(0.7);
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  width: 79vw;
+  height: 90px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero {
+  color: white;
+  height: calc(100% - 130px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  gap: 20px;
+  padding: 0 30px;
+}
+
+.hero > :first-child {
+  font-weight: 900;
+  font-size: 56px;
+  max-width: 580px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.hero > :nth-child(2) {
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+  line-height: 2;
+}
+
+.hero > :nth-child(3) {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1;
+}
+
+.curve {
+  position: relative;
+  height: 40px;
+  background-color: black;
+  border: 3px solid red;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  background: radial-gradient(
+      50% 500% at 50% -420%,
+      rgba(64, 97, 231, 0.4) 80%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    black;
+  box-sizing: border-box;
+}
+
+.sec-2 {
+  width: 80vw;
+  margin: auto;
+  padding: 20px 0 0;
+}
+
+.sec-2-head h2 {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn {
+  color: white;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-weight: 500;
+  border-style: none;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.red-btn-sm {
+  background-color: red;
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.hero-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.main input {
+  padding: 22px 180px 17px 22px;
+  font-size: 13px;
+  border-radius: 6px;
+  background-color: rgb(0 0 0 / 73%);
+  color: white;
+  border: 1px solid rgb(107, 105, 105);
+}
+
+.red-btn {
+  background-color: red;
+  padding: 12px 30px;
+  font-size: 23px;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-lang {
+  margin-right: 6px;
+  border: 1px solid rgb(107, 105, 105);
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 7px 20px 7px 10px;
+  background-color: rgba(0, 0, 0, 0.436);
+}
+
+.select {
+  padding: 10px 0 5px 0;
+}
+
+.options {
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  padding: 8px 15px 8px 10px;
+  margin-right: 22px;
+  border: 1px solid rgb(107, 105, 105);
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.movie-container {
+  box-sizing: border-box;
+  height: 280px;
+  width: 75vw;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  position: relative;
+}
+
+.movie-btn {
+  position: absolute;
+  z-index: 10;
+}
+.btn-right {
+  right: -3%;
+  bottom: 30%;
+}
+.btn-left {
+  left: -3%;
+  bottom: 30%;
+}
+
+.movie-btn button {
+  padding: 48px 1px;
+  border-radius: 8px;
+  border: transparent;
+  color: white;
+  background-color: #1a1a1a;
+  cursor: pointer;
+}
+.movie-btn button:hover {
+  background-color: #333333;
+}
+
+.movies {
+  display: flex;
+  width: 80vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  margin: auto;
+}
+
+.movie-box {
+  position: relative;
+  padding: 0px 16px;
+}
+
+.movie-poster img {
+  border-radius: 10px;
+}
+
+.movie-box .hover {
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  /* filter: saturate(0.1); */
+}
+
+.movie-box .hover:hover {
+  transform: scale(1);
+  /* filter: saturate(1.4); */
+}
+
+.movie-rank {
+  position: absolute;
+  bottom: -2px;
+  left: -25px;
+  /* color: white; */
+  font-size: 7rem;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-text-stroke: 0.1rem rgb(255, 255, 255);
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.sec-3 {
+  /* background-color: white; */
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sec-3-head {
+  padding-bottom: 20px;
+}
+.info-container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  flex: 0 0 calc(25% - 2.8rem);
+  background: linear-gradient(149deg, #192247 0%, #210e17 99.08%);
+  /* text-align: center; */
+  padding: 24px 16px 128px;
+  border-radius: 15px;
+  position: relative;
+  flex-wrap: wrap;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.info-box-h3 h3 {
+  /* margin-top: 1rem; */
+  font-size: 24px;
+}
+.info-box-p {
+  margin-top: 1rem;
+}
+.info-box-p p {
+  color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.info-box-logo {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+}
+
+.sec-4 {
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 4rem;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.qns-section {
+  margin-top: 1rem;
+}
+
+.qns-section ul {
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+li h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.qns-section li {
+  background-color: #2d2d2d;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 3px;
+}
+
+.qns-section li:hover {
+  background-color: #414141;
+}
+
+.sec-5 {
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 4rem;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sec-5-cont {
+  max-width: 48.93rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sec-5-cont h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.signup {
+  /* background-color: #192247; */
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.signup input {
+  padding: 22px 180px 17px 22px;
+  font-size: 13px;
+  border-radius: 6px;
+  background-color: rgb(0 0 0 / 73%);
+  color: white;
+  border: 1px solid rgb(107, 105, 105);
+  width: 45%;
+}
+
+.signup button {
+  color: white;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-weight: 500;
+  border-style: none;
+  background-color: red;
+  padding: 12px 30px;
+  font-size: 23px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.sec-6 {
+  width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.more-opt {
+  margin-top: 36px;
+  padding: 4px;
+  line-height: 2.2;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.list-items {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: calc(100% + 0.75rem);
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style-type: none;
+}
+
+.list-item {
+  margin-left: 5px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex: 0 0 calc(25% - 0.75rem);
+  cursor: pointer;
+}
+
+.language {
+  margin-top: 36px;
+  padding: 3px;
+  display: flex;
+box-sizing: border-box;
+}
+
+.language select {
+  background-color: black;
+    color: white;
+    font-size: 17px;
+    padding: 6px 15px 6px 10px;
+    margin-right: 22px;
+    border: 1px solid rgb(107, 105, 105);
+    border-radius: 5px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.netflix {
+  margin-top: 36px;
+}
+
+
+@media only screen and (max-width:600px){
+  body {
+    background-color: lightgreen;
+  }
+}
